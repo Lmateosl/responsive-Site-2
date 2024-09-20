@@ -1,0 +1,110 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    transition: width 0.3s ease;
+    background-color: #a1c1b4;
+    color: white;
+    overflow: hidden;
+}
+  
+  
+.sidenav.collapsed {
+    width: 60px;
+}
+  
+.mat-icon {
+    margin-right: 16px;
+}
+  
+.sidenav.collapsed .mat-icon {
+    margin-right: 0;
+}
+  
+.mat-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.menu-item-text {
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    align-self: center;
+}
+  
+.sidenav.collapsed .menu-item-text {
+    opacity: 0;
+}
+
+.iconItemMenu {
+    font-size: 25px;
+}
+  
+.menu-items {
+    flex-grow: 1;
+}
+  
+.bottom-items {
+    margin-top: auto; 
+    padding-bottom: 16px; 
+}
+@media (max-wdidth: 1000px) {
+    .bottom-items {
+        margin-top: 60%; 
+    }
+}
+  
+
+mat-sidenav-content {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+  
+mat-sidenav-content.collapsed-content {
+    margin-left: 59px !important;
+}
+
+@media (max-wdidth: 1000px) {
+    mat-sidenav-content.collapsed-content {
+        margin-left: none !important;
+    }
+}
+  
+.main-content {
+    padding: 16px;
+}
+  
+mat-toolbar {
+    background: transparent;
+    color: #53655d;
+}
+  
+@media (max-width: 1000px) {
+    mat-sidenav-content {
+      margin-left: 0;
+    }
+}
+
+.btnMenu {
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.iconMenu {
+    margin: 0px;
+    font-size: 30px;
+}
+
+.btnMenuMobile {
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+}

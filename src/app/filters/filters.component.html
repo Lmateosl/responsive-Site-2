@@ -1,0 +1,53 @@
+<div class="containerFilter">
+<div class="searchInputt">
+    <mat-form-field appearance="outline" class="filterField">
+        <mat-label>Supplier</mat-label>
+        <mat-select multiple [disableOptionCentering]="true">
+        <mat-option>
+            <mat-form-field style="width: calc(100% - 40px); display: inline-block;" disabled id="serachSelect">
+            <mat-icon  matPrefix >search</mat-icon>
+            <input matInput  [(ngModel)]="searchQuery" />
+            </mat-form-field>
+        </mat-option>
+    
+        <ng-container *ngFor="let option of options">
+                <mat-checkbox [checked]="isSelected(option)" (change)="toggleSelection(option)" (click)="$event.stopPropagation()">{{ option }}</mat-checkbox><br>
+        </ng-container>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="filterField">
+        <mat-label>Brand</mat-label>
+        <mat-select multiple [disableOptionCentering]="true">
+        <mat-option>
+            <mat-form-field style="width: calc(100% - 40px); display: inline-block;" disabled id="serachSelect">
+            <mat-icon  matPrefix>search</mat-icon>
+            <input matInput  [(ngModel)]="searchQuery" />
+            </mat-form-field>
+        </mat-option>
+    
+        <ng-container *ngFor="let option of options">
+                <mat-checkbox [checked]="isSelected(option)" (change)="toggleSelection(option)" (click)="$event.stopPropagation()">{{ option }}</mat-checkbox><br>
+        </ng-container>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="filterField">
+        <mat-label>Categories</mat-label>
+        <mat-select multiple [disableOptionCentering]="true">
+        <mat-option>
+            <mat-form-field style="width: calc(100% - 40px); display: inline-block;" disabled id="serachSelect">
+            <mat-icon  matPrefix>search</mat-icon>
+            <input matInput  [(ngModel)]="searchQuery" />
+            </mat-form-field>
+        </mat-option>
+    
+        <ng-container *ngFor="let option of options">
+                <mat-checkbox [checked]="isSelected(option)" (change)="toggleSelection(option)" (click)="$event.stopPropagation()">{{ option }}</mat-checkbox><br>
+        </ng-container>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="actionButton" style="display: flex; justify-content: flex-start; align-items: center;">
+    <button class="actionButton" style="margin-top: 10px; height: 40px; padding: 5px 10px; border: 1px solid black; color: black; margin-right: 10px;">Apply Filters</button>
+    <button class="actionButton" style="margin-top: 10px; height: 40px; padding: 5px 10px; border: 1px solid black; color: black; margin-right: 10px;">Clear Filters</button>
+</div>
+</div>
